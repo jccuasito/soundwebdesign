@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('audioengineer1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s; /* Transition para sa smooth na zoom effect */
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px;
+    color: #ff8800;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff8800;
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 1rem;
+}
+
+.software-list {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.software-list h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: xx-large;
+}
+
+.daw {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(255, 136, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.daw img {
+    width: 200px; 
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s; 
+}
+
+.daw img:hover {
+    transform: scale(1.1); 
+}
+
+.daw h3 {
+    margin: 0.5rem 0;
+}
+
+.daw p {
+    margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .logo-header {
+        margin-bottom: 1rem;
+    }
+
+    .daw img {
+        max-width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
